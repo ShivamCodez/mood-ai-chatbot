@@ -16,7 +16,7 @@ load_dotenv()
 api_key = st.secrets["MISTRAL_API_KEY"]
 
 model = ChatMistralAI(
-    model="mistral-large-latest",
+    model="mistral-small-latest",
     api_key=api_key
 )
 
