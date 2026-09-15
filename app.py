@@ -12,7 +12,13 @@ from langchain_core.messages import (
 load_dotenv()
 
 # Initialize model
-model = ChatMistralAI(model="mistral-large-2512")
+
+api_key = st.secrets["MISTRAL_API_KEY"]
+
+model = ChatMistralAI(
+    model="mistral-large-latest",
+    api_key=api_key
+)
 
 # Page Config
 st.set_page_config(
